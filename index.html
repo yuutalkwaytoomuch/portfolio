@@ -28,7 +28,7 @@
       --toggle-en: #CCCCFF;       /* periwinkle track for EN          */
       --toggle-ko: #B6D0E2;       /* powder blue track for KO         */
 
-      --font:      "parabolica", "articulat-cf", "source-han-sans-korean", sans-serif;
+      --font:      "basic-sans", "source-han-sans-korean", sans-serif;
       --ls-tight:  -0.03em;
       --ls-label:   0.05em;
       --radius-img: 3px;
@@ -160,7 +160,7 @@
     .sidebar-name {
       font-size:      clamp(2.7rem, 4.5vw, 4rem);
       font-weight:    900;
-      font-family: articulat-cf, sans-serif;
+      font-family: "basic-sans", sans-serif;
       line-height:    0.95;
       letter-spacing: -0.06em;
       color:  #5D3FD3;
@@ -356,8 +356,8 @@
 
     /* ─── Language visibility ────────────────────────────────── */
     [lang-content="ko"] { display: none; }
-    body.lang-ko [lang-content="en"] { display: none; font-family: "parabolica", sans-serif; }
-    body.lang-ko [lang-content="ko"] { display: revert; font-family: "parabolica", sans-serif; }
+    body.lang-ko [lang-content="en"] { display: none; font-family: "basic-sans", sans-serif; }
+    body.lang-ko [lang-content="ko"] { display: revert; font-family: "basic-sans", sans-serif; }
 
     /* ═══════════════════════════════════════════════════════════
        DESKTOP ≥ 769px — locked viewport, internal scroll
