@@ -17,14 +17,7 @@
   })(document);
 </script>
 
-<script>
-document.querySelector('.sidebar-avatar').addEventListener('click', function() {
-  this.classList.remove('spinning');
-  void this.offsetWidth; /* force reflow so animation restarts on repeat taps */
-  this.classList.add('spinning');
-  this.addEventListener('animationend', () => this.classList.remove('spinning'), { once: true });
-});
-</script>
+
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -849,6 +842,14 @@ document.querySelector('.sidebar-avatar').addEventListener('click', function() {
       btn.setAttribute('aria-expanded', String(!isOpen));
     });
   });
+  
+  document.querySelector('.sidebar-avatar').addEventListener('click', function() {
+  this.classList.remove('spinning');
+  void this.offsetWidth; /* force reflow so animation restarts on repeat taps */
+  this.classList.add('spinning');
+  this.addEventListener('animationend', () => this.classList.remove('spinning'), { once: true });
+});
+
 </script>
 </body>
 </html>
