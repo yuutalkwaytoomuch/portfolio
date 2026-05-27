@@ -395,12 +395,18 @@
     ═══════════════════════════════════════════════════════════ */
     @media (max-width: 768px) {
 
+  html, body {
+     height: auto !important;
+     overflow: auto !important;
+  }
+        
       .lang-bar { padding: 0 1.2rem; }
 
       .page {
         grid-template-columns: 1fr;
         grid-template-rows:    auto 1fr;
-        height:                auto;        /* natural scroll on mobile */
+        height: auto !important;       /* natural scroll on mobile */
+        overflow: visible !important;
       }
 
       .sidebar {
@@ -415,6 +421,8 @@
         align-items:    flex-start;
         gap:            1.2rem;
         font-size:      1rem;
+        height: auto !important;
+        overflow: visible !important;
       }
 
       .sidebar-avatar {
@@ -445,6 +453,8 @@
         height:     auto;
         overflow-y: visible;
         font-size:  1.4rem;
+        height: auto !important;
+       overflow-y: visible !important;
       }
 
       .entry { grid-template-columns: 1fr; }
