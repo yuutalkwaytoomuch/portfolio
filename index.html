@@ -23,6 +23,16 @@
   <link rel="stylesheet" href="https://use.typekit.net/crq7oqb.css" />
 
   <style>
+  
+  @keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.sidebar-avatar.spinning {
+  animation: spin 0.6s cubic-bezier(.4,0,.2,1) 1;
+}
+
     /* ─── Design Tokens — blue palette ──────────────────────── */
     :root {
       --bg:        #FAFAFA;       /* cool off-white */
@@ -786,6 +796,15 @@
   </div><!-- /.page -->
 
 <script>
+
+document.querySelector('.sidebar-avatar').addEventListener('click', function() {
+  this.classList.remove('spinning');
+  void this.offsetWidth; /* force reflow so animation restarts on repeat taps */
+  this.classList.add('spinning');
+  this.addEventListener('animationend', () => this.classList.remove('spinning'), { once: true });
+});
+
+
   /* ── Detect preferred language from browser/OS ───────────── */
   function preferredLang() {
     const langs = navigator.languages || [navigator.language || 'en'];
